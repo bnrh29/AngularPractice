@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="model_opts_update.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<label for="name">名前：</label>
+<!--
+<input id="name" name="name" type="text" ng-model="myName" ng-model-options="{updateOn: 'blur', debounce: 2000}" />
+-->
+<input id="name" name="name" type="text" ng-model="myName"
+       ng-model-options="{ updateOn: 'default blur', debounce: {'default': 2000, 'blur': 0}}" />
+<div>こんにちは、{{myName}}さん！</div>
+
+</body>
+</html>

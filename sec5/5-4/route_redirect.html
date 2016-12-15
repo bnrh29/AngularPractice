@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+<script src="route_redirect.js"></script>
+<script src="controller.js"></script>
+</head>
+<body>
+
+<ul>
+<li><a ng-href="#/books/108">記事 No.108（/books/108）</a></li>
+<li><a ng-href="#/articles/108">記事 No.108（/articles/108）</a></li>
+</ul>
+
+<hr />
+
+<div ng-view></div>
+
+</body>
+</html>

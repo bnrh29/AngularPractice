@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="class_evenodd.js"></script>
+<link rel="stylesheet" href="class_evenodd.css" />
+</head>
+<body ng-controller="MyController">
+
+<table class="table">
+<tr>
+<th>ISBNコード</th>
+<th>書名</th>
+<th>価格</th>
+<th>出版社</th>
+<th>刊行日</th>
+</tr>
+<tr ng-repeat="book in books" ng-class-even="'even'" ng-class-odd="'odd'">
+<td>{{book.isbn}}</td>
+<td>{{book.title}}</td>
+<td>{{book.price}}</td>
+<td>{{book.publish}}</td>
+<td>{{book.published | date: 'yyyy年MM月dd日'}}</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="limit_page.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<!-- ページャーを準備 -->
+<ul class="pagination">
+<li><a href="#" ng-click="pager(0)">1</a></li>
+<li><a href="#" ng-click="pager(1)">2</a></li>
+<li><a href="#" ng-click="pager(2)">3</a></li>
+</ul>
+
+<table class="table">
+<tr>
+<th>書名</th>
+<th>価格</th>
+<th>出版社</th>
+<th>刊行日</th>
+</tr>
+<tr ng-repeat="book in books | orderBy: 'published' | limitTo: len: start">
+<td><a ng-href="http://www.wings.msc.to/index.php/-/A-03/{{book.isbn}}">{{book.title}}</a></td>
+<td>{{book.price}}円</td>
+<td>{{book.publish}}</td>
+<td>{{book.published | date}}</td>
+</tr>
+</table>
+</body>
+</html>

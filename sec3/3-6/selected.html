@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="selected.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<div>
+<label>
+<input type="checkbox" ng-model="selected" />標準を選ぶ
+</label>
+<select>
+<option value="easy">かんたんコース</option>
+<option value="usually" ng-selected="selected">ふつうコース</option>
+<option value="difficulty">むずかしいコース</option>
+</select>
+</div>
+選択された値：{{data.book}}
+
+</body>
+</html>

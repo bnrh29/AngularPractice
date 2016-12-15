@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="model_opts_rollback.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<form name="myForm">
+<label for="myName">名前：</label>
+<input id="myName" name="myName" type="text" ng-model="myName" ng-model-options="{ debounce: 5000 }" />
+<div ng-bind="'こんにちは、' + myName + 'さん！'"></div>
+<button ng-click="onclick()">ログ出力</button>
+</form>
+
+</body>
+</html>

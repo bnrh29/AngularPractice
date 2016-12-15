@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="bind_template.js"></script>
+</head>
+<body ng-controller="MyController">
+<div>
+<label for="name">名前：</label>
+<input type="text" id="name" name="name" ng-model="name" />
+</div>
+<div>
+<label for="age">年齢：</label>
+<input type="text" id="age" name="age" ng-model="age" />
+</div>
+<div ng-bind-template="{{name}}さん！は{{age}}歳です。"></div>
+</body>
+</html>

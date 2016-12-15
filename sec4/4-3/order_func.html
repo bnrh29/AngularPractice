@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="order_func.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<ul>
+<li ng-repeat="member in members | orderBy: mySort">{{member.name}} （{{member.role}}・{{member.old}}歳）</li>
+</ul>
+
+</body>
+</html>

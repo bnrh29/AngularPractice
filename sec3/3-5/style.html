@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body ng-controller="MyController">
+<form>
+<button ng-click="myStyle={backgroundColor: '#F00', color:'#fff' }">赤</button>
+<button ng-click="myStyle={backgroundColor: '#0F0' }">緑</button>
+<button ng-click="myStyle={backgroundColor: '#00F', color:'#fff' }">青</button>
+</form>
+<div ng-style="myStyle">
+<p>WINFSプロジェクトは、当初、ライター山田祥寛の...</p>
+</div>
+</body>
+</html>

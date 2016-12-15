@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="list.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<form name="myForm" ng-submit="onsubmit()" novalidate>
+<label for="mail">メールアドレス</label><br />
+<textarea id="mail" type="text" ng-model="emails" ng-list=";"></textarea>
+</form>
+
+<ul>
+<li ng-repeat="email in emails">{{email}}</li>
+</ul>
+
+</body>
+</html>

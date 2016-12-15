@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="lowercase.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<ul ng-init="name = 'Wings Project'">
+<li>元の文字：{{name}}</li>
+<li>lowercase：{{name | lowercase}}</li>
+<li>uppercase：{{name | uppercase}}</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="select_obj_group.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<div>
+<label for="book">書籍：</label><br />
+<select name="book" id="book" ng-model="data.book"
+        ng-options="key as value.title group by value.publish for (key, value) in shelf">
+<option value="">以下から選択してください。</option>
+</select>
+</div>
+選択された値：{{data.book}}
+
+</body>
+</html>

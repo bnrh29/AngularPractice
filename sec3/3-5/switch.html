@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="switch.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<form>
+<!-- 選択ボックスをseasonプロパティに紐づけ -->
+<select ng-model="season">
+<option value="">四季を選択</option>
+<option value="spring">春</option>
+<option value="summer">夏</option>
+<option value="autumn">秋</option>
+<option value="winter">冬</option>
+</select>
+</form>
+
+<!-- seasonプロパティの値に応じて、対応するテキストを表示 -->
+<div ng-switch="season">
+<span ng-switch-when="spring">春はあけぼの...</span>
+<span ng-switch-when="spring">曙太郎...</span>
+<span ng-switch-when="summer">夏は夜...</span>
+<span ng-switch-when="autumn">秋は夕暮れ...</span>
+<span ng-switch-when="winter">冬はつとめて...</span>
+<span ng-switch-default>選択してください</span>
+</div>
+
+</body>
+</html>

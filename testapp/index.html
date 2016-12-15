@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="index.js"></script>
+<style type="text/css">
+<!--
+#r1 { background-color: #010000; width: 100px; height: 100px; }
+#r2 { background-color: #00FF00; width: 100px; height: 100px; }
+#r3 { background-color: #0000FF; width: 100px; height: 100px; }
+-->
+</style>
+</head>
+<body ng-controller="MyController">
+<div id="r1" ng-style="{'background-color': r1text}"><input name="r1text" ng-model="r1text"></div>
+<div id="r2"></div>
+<div id="r3"></div>
+</body>
+</html>

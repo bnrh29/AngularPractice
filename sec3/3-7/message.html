@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="message.js"></script>
+</head>
+<body ng-controller="MyController">
+
+<form name="myForm" novalidate>
+
+<div>
+<label for="mail">メールアドレス</label><br />
+<input id="mail" name="mail" type="email" ng-model="user.mail" required ng-minlength="10" ng-maxlength="20"/>
+<span ng-messages="myForm.mail.$error" ng-if="myForm.mail.$touched" ng-messages-multiple>
+<span ng-message="required">メールアドレスは必須です。</span>
+<span ng-message="minlength, maxlength">メールアドレスが短すぎるか、長すぎます。</span>
+<span ng-message="email">メールアドレスを正しい形式で入力してください。</span>
+</span>
+</div>
+
+</form>
+
+</body>
+</html>
