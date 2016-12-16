@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="scope.js"></script>
+</head>
+<body>
+
+<div ng-controller="MyController" ng-init="name='権兵衛'">
+<label for="name"> 名前： </label>
+<input id="name" type="text" ng-model="name" />
+<p>こんにちは、{{name}} さん！</p>
+</div>
+</body>
+</html>
