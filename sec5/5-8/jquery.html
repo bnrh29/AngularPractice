@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJS</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script type="application/javascript">
+var result = [];
+var elm = angular.element(document.getElementById('php'));
+for (var prop in elm) {
+	console.log(elm)
+	if (angular.isFunction(elm[prop])){ result.push(prop); }
+}
+console.log(result);
+</script>
+</head>
+<body>
+</body>
+</html>

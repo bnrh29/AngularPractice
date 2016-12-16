@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="UTF-8">
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+<button id="bin">bin</button>
+
+<script>
+	var obj = {
+		title: 'AngularJSアプリケーションプログラミング',
+		price: 3500,
+		show: function () {
+			console.log(this.title + '：' + this.price);
+		}
+	}
+
+	document.getElementById('bin').addEventListener('click', angular.bind(obj, obj.show), true);
+</script>
+
+</body>
+</html>
